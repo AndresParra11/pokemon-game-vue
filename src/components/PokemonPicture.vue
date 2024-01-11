@@ -24,6 +24,9 @@
       },
     },
     computed: {
+      /* Aprovecha la reactividad de Vue.js para mantener automáticamente la consistencia
+      entre la propiedad imgSrc y pokemonId. Si pokemonId cambia en algún momento, la
+      propiedad imgSrc se actualizará automáticamente */
       imgSrc() {
         return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${this.pokemonId}.svg`;
       },
@@ -38,6 +41,8 @@
   }
   img {
     height: 200px;
+
+    /* Disable drag and select */
     user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;

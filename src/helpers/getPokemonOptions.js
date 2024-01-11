@@ -1,6 +1,7 @@
 import pokemonApi from "@/api/pokemonApi";
 
 export const getPokemons = () => {
+  /* Creando un arreglo desde el 1 hasta el 650 */
   const pokemonArr = Array.from(Array(650));
   return pokemonArr.map((_, index) => index + 1);
 };

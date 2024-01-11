@@ -9,6 +9,11 @@
     <PokemonOptions :pokemons="pokemonArr" @selection="checkAnswer" />
 
     <button @click="refresh" v-if="showButton">Jugar de nuevo</button>
+
+    <template v-if="showPokemon">
+      <h2>{{ pokemon.name }}</h2>
+      <PokemonPicture :pokemonId="pokemon.id" :showPokemon="showPokemon" />
+    </template>
   </div>
   <!-- TODO: Opciones -->
 </template>
